@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Trends 2025</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6a3de8;
+            --secondary-color: #ff5e7d;
+            --accent-color: #3de8e5;
+            --dark-color: #1a1a2e;
+            --light-color: #f0f0f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 30px;
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .result-box {
+            min-height: 60px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #5429d0;
+            border-color: #5429d0;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .navbar {
+            background-color: var(--dark-color) !important;
+        }
+        
+        .table-dark {
+            background-color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Anime Trends 2025 - Jesús Jiménez | Desarrollo de Aplicaciones Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#animes"><i class="fas fa-tv"></i> Top Animes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria"><i class="fas fa-images"></i> Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calculadora"><i class="fas fa-calculator"></i> Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Anime Trends 2025</h1>
+            <p class="lead">Descubre los animes más populares y emocionantes de este año</p>
+            <p class="mb-4">Universidad de Especialidades Espíritu Santo | Samborondón - Ecuador</p>
+            <a href="#animes" class="btn btn-primary btn-lg mt-3">Explorar <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Sección de Top Animes -->
+    <section id="animes" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Top Animes 2025</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477" class="card-img-top" alt="Demon Slayer: Infinity Arc">
+                        <div class="card-body">
+                            <h5 class="card-title">Demon Slayer: Infinity Arc</h5>
+                            <p class="card-text">La nueva temporada de Kimetsu no Yaiba explora dimensiones alternativas y nuevos poderes demoníacos.</p>
+                            <a href="#" class="btn btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1560972550-aba3456b5564" class="card-img-top" alt="One Piece: Final Saga">
+                        <div class="card-body">
+                            <h5 class="card-title">One Piece: Final Saga</h5>
+                            <p class="card-text">Luffy y su tripulación se acercan al legendario One Piece en esta emocionante saga final.</p>
+                            <a href="#" class="btn btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1541562232579-512a21360020" class="card-img-top" alt="Attack on Titan: Rebirth">
+                        <div class="card-body">
+                            <h5 class="card-title">Attack on Titan: Rebirth</h5>
+                            <p class="card-text">Un nuevo spin-off que explora las consecuencias del final de la serie original con personajes inéditos.</p>
+                            <a href="#" class="btn btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Galería con Carrusel -->
+    <section id="galeria" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Galería de Escenas Épicas</h2>
+            <div id="carouselProyectos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba" class="d-block w-100" alt="Escena de Batalla" style="height: 500px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Batallas Épicas</h5>
+                            <p>Las mejores secuencias de acción de los animes más populares de 2025.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe" class="d-block w-100" alt="Personajes Icónicos" style="height: 500px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Personajes Icónicos</h5>
+                            <p>Los protagonistas que han conquistado a los fans en todo el mundo.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f" class="d-block w-100" alt="Mundos Fantásticos" style="height: 500px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mundos Fantásticos</h5>
+                            <p>Escenarios impresionantes que definen los universos de estos animes.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Tabla de Animes -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Ranking de Animes 2025</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Anime</th>
+                            <th>Género</th>
+                            <th>Calificación</th>
+                            <th>Episodios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Demon Slayer: Infinity Arc</td>
+                            <td>Acción/Fantasía</td>
+                            <td>9.8/10</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>One Piece: Final Saga</td>
+                            <td>Aventura/Fantasía</td>
+                            <td>9.7/10</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>Attack on Titan: Rebirth</td>
+                            <td>Drama/Acción</td>
+                            <td>9.5/10</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>My Hero Academia: Ultimate Power</td>
+                            <td>Superhéroes/Acción</td>
+                            <td>9.3/10</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Jujutsu Kaisen: Phantom Realm</td>
+                            <td>Sobrenatural/Acción</td>
+                            <td>9.2/10</td>
+                            <td>22</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Calculadora con JavaScript -->
+    <section id="calculadora" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Calculadora de Tiempo de Visualización</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <form id="calculadoraForm">
+                                <div class="mb-3">
+                                    <label for="tipoProyecto" class="form-label">Serie de Anime</label>
+                                    <select class="form-select" id="tipoProyecto" required>
+                                        <option value="" selected disabled>Seleccione un anime</option>
+                                        <option value="24">Demon Slayer: Infinity Arc (24 eps)</option>
+                                        <option value="48">One Piece: Final Saga (48 eps)</option>
+                                        <option value="16">Attack on Titan: Rebirth (16 eps)</option>
+                                        <option value="25">My Hero Academia: Ultimate Power (25 eps)</option>
+                                        <option value="22">Jujutsu Kaisen: Phantom Realm (22 eps)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Contenido Adicional</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="3" id="funcLogin">
+                                        <label class="form-check-label" for="funcLogin">OVAs especiales (+3 eps)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="1" id="funcPagos">
+                                        <label class="form-check-label" for="funcPagos">Película relacionada (+1 película)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="5" id="funcAdmin">
+                                        <label class="form-check-label" for="funcAdmin">Especiales de temporada (+5 eps)</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="plazoEntrega" class="form-label">Episodios por Semana</label>
+                                    <div class="range">
+                                        <input type="range" class="form-range" min="1" max="10" id="plazoEntrega" value="3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>1 ep/sem</span>
+                                            <span id="plazoValor">3 eps/sem</span>
+                                            <span>10 eps/sem</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comentarios" class="form-label">Notas Personales</label>
+                                    <textarea class="form-control" id="comentarios" rows="3" placeholder="Anota tus pensamientos sobre este anime o tus expectativas"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Calcular Tiempo</button>
+                                    <button type="reset" class="btn btn-secondary ms-2">Limpiar</button>
+                                </div>
+                            </form>
+                            <div class="result-box mt-4" id="resultadoPresupuesto">
+                                <h4 class="text-center">Tiempo de Visualización</h4>
+                                <p class="text-center">Complete el formulario para calcular cuánto tiempo necesitará para ver el anime.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-white">Inicio</a></li>
+                        <li><a href="#animes" class="text-white">Top Animes</a></li>
+                        <li><a href="#galeria" class="text-white">Galería</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Sitios de Anime</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.crunchyroll.com/" target="_blank" class="text-white">Crunchyroll</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://facebook.com" target="_blank" class="text-white mx-2"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://discord.com" target="_blank" class="text-white mx-2"><i class="fab fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="mb-0">© 2025 Anime Trends - UEES. Universidad de Especialidades Espíritu Santo | Samborondón - Ecuador</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script>
+        // Actualizar el valor de episodios por semana
+        document.getElementById('plazoEntrega').addEventListener('input', function() {
+            document.getElementById('plazoValor').textContent = this.value + ' eps/sem';
+        });
+
+        // Calcular tiempo de visualización
+        document.getElementById('calculadoraForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener valores del formulario
+            const tipoAnime = document.getElementById('tipoProyecto').value;
+            const ovas = document.getElementById('funcLogin').checked ? parseInt(document.getElementById('funcLogin').value) : 0;
+            const pelicula = document.getElementById('funcPagos').checked ? parseInt(document.getElementById('funcPagos').value) : 0;
+            const especiales = document.getElementById('funcAdmin').checked ? parseInt(document.getElementById('funcAdmin').value) : 0;
+            const epsPorSemana = parseInt(document.getElementById('plazoEntrega').value);
+            const comentarios = document.getElementById('comentarios').value;
+            
+            // Validar que se haya seleccionado un anime
+            if (!tipoAnime) {
+                alert('Por favor, seleccione un anime');
+                return;
+            }
+            
+            // Calcular episodios totales
+            let episodiosTotales = parseInt(tipoAnime);
+            
+            // Sumar contenido adicional (cada película cuenta como 3 episodios en tiempo)
+            const contenidoAdicional = ovas + (pelicula * 3) + especiales;
+            episodiosTotales += contenidoAdicional;
+            
+            // Calcular semanas necesarias
+            const semanasNecesarias = Math.ceil(episodiosTotales / epsPorSemana);
+            
+            // Calcular tiempo total en horas (cada episodio dura aproximadamente 24 minutos)
+            const tiempoTotalMinutos = episodiosTotales * 24;
+            const tiempoTotalHoras = (tiempoTotalMinutos / 60).toFixed(1);
+            
+            // Mostrar resultado
+            const resultadoDiv = document.getElementById('resultadoPresupuesto');
+            resultadoDiv.innerHTML = `
+                <h4 class="text-center">Tiempo de Visualización</h4>
+                <div class="alert alert-success">
+                    <p><strong>Anime Seleccionado:</strong> ${document.getElementById('tipoProyecto').options[document.getElementById('tipoProyecto').selectedIndex].text}</p>
+                    <p><strong>Episodios Totales:</strong> ${episodiosTotales} episodios</p>
+                    <p><strong>Tiempo Total:</strong> ${tiempoTotalHoras} horas</p>
+                    <p><strong>Tiempo de Finalización:</strong> ${semanasNecesarias} semanas (viendo ${epsPorSemana} episodios por semana)</p>
+                </div>
+                <p class="text-muted">¡Disfruta tu maratón de anime! Recuerda hacer pausas para descansar la vista.</p>
+            `;
+        });
+    </script>
+</body>
+</html>

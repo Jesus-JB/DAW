@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Anime Trends 2025</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6a3de8;
+            --secondary-color: #ff5e7d;
+            --accent-color: #3de8e5;
+            --dark-color: #1a1a2e;
+            --light-color: #f0f0f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 30px;
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .contact-info-item {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info-item i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        #mensajeEnviado {
+            display: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #5429d0;
+            border-color: #5429d0;
+        }
+        
+        .navbar {
+            background-color: var(--dark-color) !important;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(106, 61, 232, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Anime Trends 2025 - Jesús Jiménez | Desarrollo de Aplicaciones Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#animes"><i class="fas fa-tv"></i> Top Animes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#galeria"><i class="fas fa-images"></i> Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#calculadora"><i class="fas fa-calculator"></i> Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Contáctanos</h1>
+            <p class="lead">¿Tienes preguntas sobre animes o quieres compartir tus opiniones?</p>
+            <p class="mb-4">Universidad de Especialidades Espíritu Santo | Samborondón - Ecuador</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="mb-4">Comparte tu Opinión</h2>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" placeholder="Tu apellido" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Tu número de teléfono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <select class="form-select" id="asunto" required>
+                                <option value="" selected disabled>Selecciona un asunto</option>
+                                <option value="Consulta">Recomendación de anime</option>
+                                <option value="Presupuesto">Sugerencia para el sitio</option>
+                                <option value="Soporte">Reporte de error</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Comparte tus pensamientos sobre animes o sugerencias para nuestro sitio" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="terminos" required>
+                            <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                    
+                    <!-- Alerta de mensaje enviado -->
+                    <div class="alert alert-success mt-4" id="mensajeEnviado" role="alert">
+                        <h4 class="alert-heading">¡Mensaje enviado!</h4>
+                        <p>¡Gracias por compartir tu opinión! Hemos recibido tu mensaje y te responderemos lo antes posible.</p>
+                        <hr>
+                        <p class="mb-0" id="resumenContacto"></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h2 class="mb-4">Información de Contacto</h2>
+                    <div class="contact-info-item d-flex align-items-center">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h5 class="mb-0">Dirección</h5>
+                            <p class="mb-0">Universidad de Especialidades Espíritu Santo, Samborondón, Ecuador</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item d-flex align-items-center">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h5 class="mb-0">Teléfono</h5>
+                            <p class="mb-0">+593 4 283 5630</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item d-flex align-items-center">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h5 class="mb-0">Email</h5>
+                            <p class="mb-0">jajimenezb@uees.edu.ec</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item d-flex align-items-center">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h5 class="mb-0">Horario de Atención</h5>
+                            <p class="mb-0">Lunes a Viernes: 6:00 PM - 7:30 PM | Aula G-102</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Mapa de ubicación -->
+                    <div class="mt-4">
+                        <h4>Nuestra Ubicación</h4>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.053149290603!2d-79.86867412551136!3d-2.133276537137402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6ce70389539b%3A0x47f54e8a54356fd1!2sUniversidad%20Esp%C3%ADritu%20Santo!5e0!3m2!1ses!2sec!4v1747352383028!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Preguntas Frecuentes -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Preguntas Frecuentes</h2>
+            <div class="accordion" id="accordionFAQ">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Cómo se seleccionan los animes destacados para 2025?</button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Nuestro equipo de expertos analiza las tendencias actuales, las expectativas de los fans, los anuncios oficiales de los estudios de animación y las adaptaciones de mangas populares. Consideramos factores como la popularidad de la franquicia, el estudio de animación involucrado, el equipo de producción y la recepción de temporadas anteriores para crear nuestras predicciones para 2025.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Dónde puedo ver los animes recomendados?</button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            La mayoría de los animes destacados estarán disponibles en plataformas de streaming como Crunchyroll, Funimation, Netflix y Amazon Prime Video. Cada anime puede tener diferentes acuerdos de distribución según la región. En nuestra sección de detalles de cada anime, proporcionamos información sobre dónde verlos legalmente en Ecuador y Latinoamérica.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Puedo sugerir animes para incluir en el ranking?</button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            ¡Absolutamente! Valoramos las opiniones de nuestra comunidad. Puedes enviarnos tus sugerencias a través del formulario de contacto en esta página. Cada mes actualizamos nuestras listas basándonos en nuevos anuncios y en los comentarios de nuestros usuarios. También puedes participar en nuestras encuestas mensuales en nuestras redes sociales para influir en nuestros rankings.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#inicio" class="text-white">Inicio</a></li>
+                        <li><a href="index.html#animes" class="text-white">Top Animes</a></li>
+                        <li><a href="index.html#galeria" class="text-white">Galería</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Sitios de Anime</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.crunchyroll.com/" target="_blank" class="text-white">Crunchyroll</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://facebook.com" target="_blank" class="text-white mx-2"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://discord.com" target="_blank" class="text-white mx-2"><i class="fab fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="mb-0">© 2025 Anime Trends - UEES. Universidad de Especialidades Espíritu Santo | Samborondón - Ecuador</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script>
+        // Procesar el formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Validar email con expresión regular
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor, introduce un correo electrónico válido');
+                return;
+            }
+            
+            // Mostrar resumen del mensaje
+            const resumenContacto = document.getElementById('resumenContacto');
+            resumenContacto.innerHTML = `
+                <strong>Nombre:</strong> ${nombre} ${apellido}<br>
+                <strong>Email:</strong> ${email}<br>
+                <strong>Asunto:</strong> ${asunto}<br>
+                <strong>Mensaje:</strong> ${mensaje.substring(0, 50)}${mensaje.length > 50 ? '...' : ''}
+            `;
+            
+            // Mostrar mensaje de éxito
+            document.getElementById('mensajeEnviado').style.display = 'block';
+            
+            // Limpiar formulario
+            this.reset();
+            
+            // Desplazarse hasta el mensaje de éxito
+            document.getElementById('mensajeEnviado').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
