@@ -1,0 +1,32 @@
+<div class="carousel-container">
+  <div class="carousel-inner">
+    <div *ngFor="let slide of slides; let i = index" 
+         class="carousel-item" 
+         [class.active]="i === activeSlideIndex">
+      <div class="carousel-image-container">
+        <img [src]="slide.image" alt="{{ slide.title }}" class="carousel-image">
+        <div class="carousel-caption">
+          <h3>{{ slide.title }}</h3>
+          <p>{{ slide.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button *ngFor="let slide of slides; let i = index" 
+            type="button" 
+            [class.active]="i === activeSlideIndex"
+            (click)="setActiveSlide(i)">
+    </button>
+  </div>
+  
+  <!-- Controles -->
+  <button class="carousel-control-prev" (click)="setActiveSlide((activeSlideIndex - 1 + slides.length) % slides.length)">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" (click)="setActiveSlide((activeSlideIndex + 1) % slides.length)">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>

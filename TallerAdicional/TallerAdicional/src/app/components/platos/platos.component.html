@@ -1,0 +1,59 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Nuestros Platos</h2>
+  
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+      <div class="input-group">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Buscar platos..." 
+          [(ngModel)]="searchTerm"
+          (keyup.enter)="searchMeals()"
+        >
+        <button class="btn btn-primary" type="button" (click)="searchMeals()">
+          Buscar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="text-center my-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+    <p class="mt-2">Cargando platos...</p>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger text-center" role="alert">
+    {{ error }}
+  </div>
+
+  <div *ngIf="!loading && !error && meals.length === 0" class="text-center my-5">
+    <p>No se encontraron platos. Intente con otra búsqueda.</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" *ngIf="!loading && meals.length > 0">
+    <div class="col" *ngFor="let meal of meals">
+      <div class="card h-100">
+        <img [src]="meal.strMealThumb" class="card-img-top" [alt]="meal.strMeal">
+        <div class="card-body">
+          <h5 class="card-title">{{ meal.strMeal }}</h5>
+          <p class="card-text">
+            <span class="badge bg-primary me-2">{{ meal.strCategory }}</span>
+            <span class="badge bg-secondary">{{ meal.strArea }}</span>
+          </p>
+          <p class="card-text">{{ meal.strInstructions | slice:0:150 }}...</p>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">ID: {{ meal.idMeal }}</small>
+            <a [href]="meal.strYoutube" target="_blank" class="btn btn-sm btn-outline-danger" *ngIf="meal.strYoutube">
+              Ver Video
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

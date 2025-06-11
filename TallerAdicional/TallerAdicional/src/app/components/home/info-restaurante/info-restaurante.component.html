@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12 text-center mb-4">
+      <h2 class="display-4">{{ restaurantInfo.name }}</h2>
+      <p class="lead">{{ restaurantInfo.description }}</p>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Nuestra Historia</h3>
+          <p class="card-text">{{ restaurantInfo.history }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Especialidades</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let specialty of restaurantInfo.specialties">
+              {{ specialty }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body text-center">
+          <h3 class="card-title">Horario de Atención</h3>
+          <p class="card-text">
+            <strong>Lunes a Viernes:</strong> {{ restaurantInfo.hours.weekdays }}<br>
+            <strong>Fines de Semana:</strong> {{ restaurantInfo.hours.weekends }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
