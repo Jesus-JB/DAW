@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "application": {
+    "recetas-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -14,6 +14,9 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -53,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "application:build:production"
+              "buildTarget": "recetas-app:build:production"
             },
             "development": {
-              "buildTarget": "application:build:development"
+              "buildTarget": "recetas-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -67,6 +70,10 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -83,6 +90,6 @@
     }
   },
   "cli": {
-    "analytics": "12a23d80-eb25-454f-b356-6bd9dabf5b99"
+    "analytics": false
   }
 }

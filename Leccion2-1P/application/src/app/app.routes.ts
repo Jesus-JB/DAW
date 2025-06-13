@@ -1,11 +1,9 @@
 import { Routes } from '@angular/router';
-import { Home } from './components/home/home';
-import { RecipeList} from './components/recipe-list/recipe-list';
-import { Carousel } from './components/carousel/carousel';
+import { RecipesComponent } from './components/recipes/recipes';
+import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
 
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'recetas', component: RecipeList },
-  { path: 'galeria', component: Carousel},
+  { path: '', component: RecipesComponent },
+  { path: 'recipe/:nombre', component: RecipeDetailComponent },
   { path: '**', redirectTo: '' }
 ];
