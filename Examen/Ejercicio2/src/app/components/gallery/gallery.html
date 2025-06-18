@@ -1,0 +1,57 @@
+<div class="container mt-4">
+  <h2 class="mb-4">NASA Galaxy Images</h2>
+  
+  <div *ngIf="loading" class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger">
+    {{ error }}
+  </div>
+
+  <table *ngIf="!loading && !error" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date Created</th>
+        <th>Center</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of nasaItems">
+        <td>{{ item.data[0].title }}</td>
+        <td>{{ item.data[0].description | slice:0:100 }}...</td>
+        <td>{{ item.data[0].date_created | date }}</td>
+        <td>{{ item.data[0].center }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="showImages(item)" data-bs-toggle="modal" [attr.data-bs-target]="'#imageModal' + item.data[0].title.replace(' ', '')">
+            View Images
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" [id]="'imageModal' + item.data[0].title.replace(' ', '')" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">{{ item.data[0].title }}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div *ngFor="let link of item.links" class="col-md-6 mb-3">
+                      <img [src]="link.href" class="img-fluid" [alt]="item.data[0].title">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
