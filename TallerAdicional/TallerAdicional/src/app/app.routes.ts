@@ -1,10 +1,23 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { PlatosComponent } from './components/platos/platos.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'platos', component: PlatosComponent },
-  { path: '**', redirectTo: '' }
+  {
+    path: '',
+    loadComponent: () =>
+      import('./components/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./components/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'platos',
+    loadComponent: () =>
+      import('./components/platos/platos.component').then(m => m.PlatosComponent)
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
